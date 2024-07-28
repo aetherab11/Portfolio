@@ -14,7 +14,7 @@
 body {
     display: block;
     color: var(--text-color);
-    background: linear-gradient(to right,var(--color1),  var(--color3) );
+    background: linear-gradient( to left,   var(--color3) ,  var(--color1));
 }
 
 .logo a {
@@ -227,18 +227,20 @@ img{
     top: 0;
     border-radius: 20px;
     filter: brightness(0.7) blur(0.4px);
-    box-shadow: 10px 10px 20px white,
-        -10px -10px 20px var(--color1);
+    box-shadow: -10px -10px 20px var(--color1),
+                10px 10px 20px white;
 }
-
-
-
 img:hover{
-    box-shadow: 0px 0px 20px white;
-    transform: scale(1.03);
-    filter: brightness(1) blur(0px) hue-rotate(10deg);
-    transition: 2 ease-in  ;
+    box-shadow:  -10px -10px 20px var(--background-color),
+    10px 10px 20px white;
+    transform: scale(1.01);
+    filter: brightness(0.8) blur(0px) hue-rotate(8deg);
+    transition: 0.2s ease-in  ;
 }
+
+
+
+
 
 .text-animation {
     font-size: 2rem;
@@ -510,8 +512,8 @@ header {
     top: 100%;
     right: auto;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -547,4 +549,79 @@ header {
 
 
 
+@media only screen and (max-width: 950px) {
+    .hire {
+      display: block;
+    }
+    .nav-list {
+        display: none;
+    }
+    .dropdown-menu {
+        left: -150px; /* move the menu 30px to the left on smaller screens */
+      }
+}
 
+@media only screen and (max-width: 736px){
+    img {
+        width: 100%;
+    }
+    .home-content {
+        width: auto;
+        left: 150px;
+        padding: 50px;
+    }
+}
+/* Add this to center the image and home content on mobile */
+@media only screen and (max-width: 500px) {
+    .image {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding-top: 20px;
+     }
+   
+    .image img {
+       width: 80%; /* Reduce the image width to make room for the home content */
+       border-radius: 20px;
+       filter: brightness(0.7) blur(0.4px);
+    
+     }
+   
+    .home {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       padding: 10px;
+     }
+   
+    .home-content {
+      
+       padding: 10px;
+       border-radius: 20px;
+     
+       margin-top: 20px;
+       width: 80%; /* Match the width of the image */
+     }
+   
+     /* Center the image and home content vertically */
+    .image,.home-content {
+       position: relative;
+       top: 50%;
+       transform: translateY(-50%);
+     }
+   
+     /* Fix the services boxes on mobile */
+    .service-box {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+     }
+   
+    .box {
+       margin-bottom: 10px;
+       padding: 10px;
+       border-radius: 20px;
+
+       backdrop-filter: blur(20px);
+     }
+   }
