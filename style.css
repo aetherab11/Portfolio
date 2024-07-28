@@ -576,14 +576,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 20px;
   }
 
  .image img {
-    width: 100%;
+    width: 80%; /* Reduce the image width to make room for the home content */
     border-radius: 20px;
     filter: brightness(0.7) blur(0.4px);
-    box-shadow: 0px 0px 10px var(--color1);
   }
 
  .home {
@@ -594,11 +593,18 @@ header {
   }
 
  .home-content {
-    background-color: var(--color1);
     padding: 10px;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px var(--color1);
-    margin-top: 20px; /* Add a small margin between the image and home content */
+
+    margin-top: 20px;
+    width: 80%; /* Match the width of the image */
+  }
+
+  /* Center the image and home content vertically */
+ .image,.home-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   /* Fix the services boxes on mobile */
