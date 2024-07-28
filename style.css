@@ -572,46 +572,47 @@ header {
 }
 /* Add this to center the image and home content on mobile */
 @media only screen and (max-width: 500px) {
-    .image {
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       padding-top: 50px;
-     }
-   
-    .image img {
-       width: 100%;
-       border-radius: 20px;
-       filter: brightness(0.7) blur(0.4px);
-       box-shadow: 0px 0px 10px var(--color1);
-     }
-   
-    .home {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       padding: 10px;
-     }
-   
-    .home-content {
-       background-color: var(--color1);
-       padding: 10px;
-       border-radius: 20px;
-       box-shadow: 0px 0px 10px var(--color1);
-     }
-   
-     /* Fix the services boxes on mobile */
-    .service-box {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-     }
-   
-    .box {
-       margin-bottom: 10px;
-       padding: 10px;
-       border-radius: 20px;
-       border: 0.5px solid rgb(184, 184, 184);
-       backdrop-filter: blur(20px);
-     }
-   }
+ .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+ .image img {
+    width: 100%;
+    border-radius: 20px;
+    filter: brightness(0.7) blur(0.4px);
+    box-shadow: 0px 0px 10px var(--color1);
+  }
+
+ .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+ .home-content {
+    background-color: var(--color1);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px var(--color1);
+    margin-top: 20px; /* Add a small margin between the image and home content */
+  }
+
+  /* Fix the services boxes on mobile */
+ .service-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ .box {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0.5px solid rgb(184, 184, 184);
+    backdrop-filter: blur(20px);
+  }
+}
